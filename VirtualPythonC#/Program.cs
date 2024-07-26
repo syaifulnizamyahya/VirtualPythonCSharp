@@ -9,6 +9,11 @@ if (Debugger.IsAttached)
 {
     pathToVirtualEnv = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.Parent.FullName + @"\.conda\";
 }
+else
+{
+    //TODO: Define your virtual env path here
+    throw new NotImplementedException();
+}
 
 // be sure not to overwrite your existing "PATH" environmental variable.
 var path = Environment.GetEnvironmentVariable("PATH").TrimEnd(';');
