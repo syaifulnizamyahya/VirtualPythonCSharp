@@ -1,0 +1,13 @@
+prefix=d:/Dev/VirtualPythonC#/.conda/Library
+exec_prefix=d:/Dev/VirtualPythonC#/.conda/Library
+libdir=d:/Dev/VirtualPythonC#/.conda/Library/lib
+sharedlibdir=d:/Dev/VirtualPythonC#/.conda/Library/lib
+includedir=d:/Dev/VirtualPythonC#/.conda/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
