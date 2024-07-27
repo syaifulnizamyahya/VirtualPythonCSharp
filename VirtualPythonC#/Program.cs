@@ -24,10 +24,10 @@ Environment.SetEnvironmentVariable("PATH", pathToVirtualEnv, process);
 Environment.SetEnvironmentVariable("PYTHONHOME", pathToVirtualEnv, process);
 Environment.SetEnvironmentVariable("PYTHONPATH", $"{pathToVirtualEnv}\\Lib\\site-packages;{pathToVirtualEnv}\\Lib", process);
 
-Runtime.PythonDLL = pathToVirtualEnv + @"\\python311.dll";
+Runtime.PythonDLL = pathToVirtualEnv + @"\python311.dll";
 
 PythonEngine.PythonHome = pathToVirtualEnv;
-PythonEngine.PythonPath = pathToVirtualEnv + "\\DLLs;" + Environment.GetEnvironmentVariable("PYTHONPATH", process);
+PythonEngine.PythonPath = pathToVirtualEnv + @"\DLLs;" + Environment.GetEnvironmentVariable("PYTHONPATH", process);
 PythonEngine.Initialize();
 dynamic sys = Py.Import("sys");
 Console.WriteLine("Python version: " + sys.version);
